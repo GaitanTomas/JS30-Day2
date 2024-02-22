@@ -36,17 +36,10 @@ body {
     inset 0 0 0 3px #EFEFEF,
     inset 0 0 10px black,
     0 0 10px rgba(0,0,0,0.2);
-}
-
-.clock-center {
-    width: 6.1px;
-    height: 6.1px;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* Blur */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .clock-face {
@@ -62,13 +55,19 @@ body {
     background: black;
     position: absolute;
     top: 50%;
-    transform-origin: 100%;
+    transform-origin: 98%;
     transform: rotate(90deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    border-radius: 55% 5px 5px 55%;
 }
 
 .hour-hand{
     width: 40%;
     left: 10%;
+}
+
+.second-hand{
+    background: red;
+    z-index: -1;
 }
